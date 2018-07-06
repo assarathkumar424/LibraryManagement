@@ -1,0 +1,41 @@
+<div class="js"><!--this is supposed to be on the HTML element but codepen won't let me do it-->
+  <body>
+    <div id="preloader"></div>
+
+    <h1>SUPER SIMPLE FULL PAGE PRELOADER</h1>
+
+    <p>Works with modernizr, or you could just add your own js class to the html element using javascript</p>
+
+    <p>You can make it fit your site better by generating your own image here: http://ajaxload.info/ then change the background color in the css</p>
+
+    <p>The example below doesn't fade out because the pageload event isn't fireing I'm guessing? but it will on your site when your page loads.</p>
+
+  </body>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+.js div#preloader { position: fixed; left: 0; top: 0; z-index: 999; width: 100%; height: 100%; overflow: visible; background: #333 url('http://files.mimoymima.com/images/loading.gif') no-repeat center center; }
+
+</style>
+<script>
+    jQuery(document).ready(function($) {
+$(window).load(function(){
+    $('#preloader').fadeOut('slow',function(){$(this).remove();});
+});
+
+});
+</script>
